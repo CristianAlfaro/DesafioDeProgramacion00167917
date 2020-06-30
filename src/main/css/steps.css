@@ -1,0 +1,28 @@
+.btn_step{
+    -fx-background-color: #161d2a;
+    -fx-border: none;
+}
+
+.btn_step:hover{                        
+    -fx-background-color: #2b3952;
+}
+
+.btn_step:focused{
+    -fx-background-color: #28354c;
+}
+
+.counter{
+    -fx-background-color: #28354c;
+}
+
+.menu{
+    -fx-background-color: #040507;
+}
+
+.steppar{
+    -fx-background-color: #ffffff;
+}
+
+.stepimpar{
+    -fx-background-color: #4e4e4e;
+}

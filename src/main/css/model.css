@@ -1,0 +1,29 @@
+.button1{
+    -fx-background-color: #161d2a;
+    -fx-border: none;
+}
+
+.button1:hover{
+    -fx-background-color: #2b3952;
+}
+
+.button2{
+    -fx-background-color: #161d2a;
+    -fx-border: none;
+}
+
+.button2:hover{
+    -fx-background-color: #2b3952;
+}
+
+
+.counter{
+    -fx-background-color: #28354c;
+}
+
+.Pane3{
+    -fx-background-image: url("../resources/aiz.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}

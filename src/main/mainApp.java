@@ -20,10 +20,8 @@ public class mainApp extends Application {
 
 
         primaryStage.setScene(FactoryScene.getScene(TypeScene.MAIN , this));
-        //primaryStage.initStyle(StageStyle.TRANSPARENT);
-        System.out.println(primaryStage);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.show();
-
         main = this;
     }
 

@@ -1,0 +1,11 @@
+.button{
+    -fx-background-color: #161d2a;
+    -fx-border: none;
+}
+
+.Pane{
+    -fx-background-image: url("../resources/aiz_wallestein.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}

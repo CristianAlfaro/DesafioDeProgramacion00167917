@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<GridPane alignment="center" hgap="10" prefHeight="284.0" prefWidth="504.0" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="main.controller.Step6Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Button fx:id="star" onMousePressed="#star" mnemonicParsing="false" prefHeight="29.0" prefWidth="56.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+   </children>
+</GridPane>

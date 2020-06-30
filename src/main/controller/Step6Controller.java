@@ -13,36 +13,18 @@ import main.scenes.TypeScene;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainController implements Initializable {
-
-    double x = 0;
-    double y = 0;
+public class Step6Controller implements Initializable {
 
     @FXML
-    public void start (MouseEvent event) {
+    public void star (MouseEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(FactoryScene.getScene(TypeScene.MODEL, mainApp.getInstance()));
-
+        stage.setScene(FactoryScene.getScene(TypeScene.COMPONENTS, mainApp.getInstance()));
     }
 
     @FXML
     void close (MouseEvent event){
         Platform.exit();
         System.exit(0);
-    }
-
-    @FXML
-    void dragged (MouseEvent event){
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-
-        stage.setX(event.getScreenX() - x);
-        stage.setY(event.getScreenY() - y);
-    }
-    @FXML
-    void pressed (MouseEvent event) {
-        x = event.getSceneX();
-        y = event.getSceneY();
     }
 
     @Override
