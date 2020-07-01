@@ -7,10 +7,6 @@
     -fx-background-color: #2b3952;
 }
 
-.btn_step:focused{
-    -fx-background-color: #28354c;
-}
-
 .counter{
     -fx-background-color: #28354c;
 }
@@ -19,10 +15,6 @@
     -fx-background-color: #040507;
 }
 
-.steppar{
+.steppar, .stepimpar{
     -fx-background-color: #ffffff;
-}
-
-.stepimpar{
-    -fx-background-color: #4e4e4e;
 }

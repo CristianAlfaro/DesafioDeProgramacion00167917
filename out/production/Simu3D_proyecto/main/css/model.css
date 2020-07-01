@@ -22,8 +22,5 @@
 }
 
 .Pane3{
-    -fx-background-image: url("../resources/aiz.png");
-    -fx-background-position: center;
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: cover;
+    -fx-background-color: rgba(22, 29, 42, 0.55);
 }

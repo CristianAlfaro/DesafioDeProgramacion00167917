@@ -3,6 +3,10 @@
     -fx-border: none;
 }
 
+.button:hover{
+    -fx-background-color: #2b3952;
+}
+
 .Pane{
     -fx-background-image: url("../resources/aiz_wallestein.png");
     -fx-background-position: center;
