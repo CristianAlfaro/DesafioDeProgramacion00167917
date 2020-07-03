@@ -65,64 +65,349 @@
       </Pane>
       <Pane fx:id="pane1" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css">
          <children>
-            <Button fx:id="pass1" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass1" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
-            <Label layoutX="326.0" layoutY="14.0" text="Paso 1 - Localización">
+            <Button fx:id="pass1" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Label layoutX="326.0" layoutY="25.0" text="Paso 1 - Localización">
                <font>
                   <Font size="36.0" />
                </font>
             </Label>
-            <ImageView fitHeight="332.0" fitWidth="590.0" layoutX="14.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="267.0" fitWidth="483.0" layoutX="108.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../resources/isoparametrizacion.png" />
+                  <Image url="@../resources/isoparametrizacion2.png" />
                </image>
             </ImageView>
-            <Label layoutX="14.0" layoutY="67.0" prefHeight="62.0" prefWidth="535.0" text="Comenzamos con un proceso llamada isoparametrización que nos ayudara con la irregularidad de nuestra malla, trasladamos todo a un plano (Ԑ,η,ψ). " textAlignment="JUSTIFY" wrapText="true" />
+            <Label layoutX="81.0" layoutY="112.0" prefHeight="70.0" prefWidth="784.0" text="Comenzamos con un proceso llamada isoparametrización que nos ayudara con la irregularidad de nuestra malla, trasladamos todo a un plano (Ԑ,η,ψ). " textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label layoutX="81.0" layoutY="173.0" prefHeight="70.0" prefWidth="784.0" text="De este proceso podemos extraer las siguientes formluas que nos ayudaran mas adelante." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="141.0" fitWidth="240.0" layoutX="559.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/paso1.1.png" />
+               </image>
+            </ImageView>
          </children></Pane>
       <Pane fx:id="pane2" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="steppar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Button fx:id="pass2" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass2" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Button fx:id="pass2" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Label layoutX="68.0" layoutY="103.0" prefHeight="92.0" prefWidth="845.0" text="Para poder seguir adelante debemos discretizar nuestro modelo, eso lo haremos con la interpolacion de las varaiable con las que trabajaremos, nos daran los siguientes resultados, observa bien para no perderte mas adelante." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="317.0" layoutY="30.0" text="Paso 2 - Interpolacion">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="246.0" fitWidth="549.0" layoutX="217.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/paso2.1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="246.0" fitWidth="549.0" layoutX="217.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/paso2.2.png" />
+               </image>
+            </ImageView>
          </children></Pane>
       <Pane fx:id="pane3" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Button fx:id="pass3" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass3" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
-         </children></Pane>
+            <Button fx:id="pass3" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Label layoutX="217.0" layoutY="33.0" text="Paso 3 - Aproximacion del modelo">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="123.0" prefHeight="92.0" prefWidth="845.0" text="Ya conseguimos interpolar nuestras incógnitas, ahora las sustituiremos en el modelo para poder seguir con el metodo." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="133.0" fitWidth="300.0" layoutX="67.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/paso3.1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="133.0" fitWidth="300.0" layoutX="615.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/paso3.2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="172.0" layoutX="406.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/arrow.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="69.0" layoutY="363.0" prefHeight="92.0" prefWidth="845.0" text="Bien!!! ya lo discretizamos pero ahora no es igual, debemos arreglar eso de alguna manera. Para eso daremos una vuelta extra pero habra que arreglar estas ecuaciones un poco, para eso pasemos todo a la derecha y llamemoles residuales (R1 y R2)." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="117.0" fitWidth="368.0" layoutX="308.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/paso3.3.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
       <Pane fx:id="pane4" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="steppar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Button fx:id="pass4" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass4" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
-         </children></Pane>
+            <Button fx:id="pass4" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Label layoutX="161.0" layoutY="28.0" text="Paso 4 - Metodo de residuos ponderados">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="181.0" fitWidth="193.0" layoutX="724.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/paso4.1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="69.0" layoutY="105.0" prefHeight="124.0" prefWidth="436.0" text="Recuerdas el error que mencionamos en el paso pasado? pues com este metodo buscaremos solucionarlo, partamos con lo que establace este metodo." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="229.0" prefHeight="92.0" prefWidth="436.0" text="Este nos dice que la integral de algo que llamaremos peso (W) multiplicado por los residuales en todo el volumen es igual a &quot;0&quot;." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="141.0" fitWidth="133.0" layoutX="574.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/paso4.2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="331.0" prefHeight="92.0" prefWidth="845.0" text="Usemos un poco de algebra vectorial y arreglemos estas 2 ecuaciones, ya que las dos son iguales a cero no hay problemas en sumarlas y unirlas en una misma integral, pero mejor mira como." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="181.0" fitWidth="300.0" layoutX="354.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/paso4.3.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
       <Pane fx:id="pane5" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Button fx:id="pass5" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass5" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Label layoutX="264.0" layoutY="38.0" text="Paso 5 - Metodo de Galerkin">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pane51" layoutX="64.0" layoutY="110.0" prefHeight="455.0" prefWidth="855.0">
+               <children>
+                  <Label prefHeight="60.0" prefWidth="855.0" text="TENEMOS UN PROBLEMA!!!! Cuanto valdran las W? El metodo de Galrkin nos ayudara para resolver esto, asumiremos  que los pesos son igual que las funciones de forma, asi que tenemos esto:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="89.0" fitWidth="83.0" layoutX="386.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso5.1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="123.0" prefHeight="60.0" prefWidth="855.0" text="Ahora sustituyamos en las ecuaciones que teniamos y juguemos un poco para que se vaya viendo mas trabajable y amigable." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="106.0" fitWidth="700.0" layoutX="78.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso5.3.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="103.0" fitWidth="253.0" layoutX="301.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso5.2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="141.0" fitWidth="770.0" layoutX="43.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso5.4.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane52" layoutX="64.0" layoutY="110.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label prefHeight="60.0" prefWidth="855.0" text="Vamos avanzando bien, ahora deberiamos expandir cada integral para ver que es lo que tenemos que operar mas adelante." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="78.0" fitWidth="172.0" layoutX="336.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso5.8.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="233.0" fitWidth="709.0" layoutX="67.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso5.6.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="330.0" layoutX="257.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso5.7.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1.0" layoutY="245.0" prefHeight="88.0" prefWidth="855.0" text="Muy complicado cierto? usemos una letra para referirnos a cada integral, asi almenos ahorramos tiempo al escribircada una y ya que estamos en esto porque no regresar a las 2 ecuaciones que teniamos al inicio, lo recuerdas? antes eran 2 que unimos pero ahor ya nos serviran mas separadas, asi que hagamoslo." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane53" layoutX="64.0" layoutY="110.0" prefHeight="530.0" prefWidth="917.0" visible="false">
+               <children>
+                  <Label prefHeight="60.0" prefWidth="855.0" text="Sabes algo curioso, a la forma del modelo a la que hemos llegado en este momento se le conoce como su FORMA FUERTE, apartir de ella seguiremos trabajando, vamos bien ya estamos casi a medio camino." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="170.0" fitWidth="502.0" layoutX="177.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso5.9.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="pass5" layoutX="852.0" layoutY="485.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+               </children>
+            </Pane>
          </children></Pane>
       <Pane fx:id="pane6" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="steppar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Button fx:id="pass6" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass6" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
-         </children></Pane>
+            <Label layoutX="246.0" layoutY="25.0" text="Paso 6 - Integracion por partes">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pane61" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0">
+               <children>
+                  <Label prefHeight="114.0" prefWidth="581.0" text="Habias notado que en el termino G tenemos una doble derivacion de algo lineal? eso no podemos permitirlo ya que se hara 0, para evitar eso daremos otra vuelta mas antes de seguir. Utilizaremos la integracion por partes para evitar este posible tropiezo, entonces empecemos. " textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="70.0" fitWidth="205.0" layoutX="620.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="97.0" fitWidth="261.0" layoutX="304.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="167.0" fitWidth="193.0" layoutX="331.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.3.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="108.0" fitWidth="560.0" layoutX="148.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.4.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane62" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="103.0" prefHeight="114.0" prefWidth="866.0" text="En esta ecuacion la parte azul no nos servira para nada asi que la descartaremos y solamente manejaremos esto:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="108.0" fitWidth="560.0" layoutX="148.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.4.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="70.0" fitWidth="340.0" layoutX="297.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.5.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="252.0" prefHeight="31.0" prefWidth="866.0" text="Bien, terminamos la integracion, llamaremos a esto termino K para diferenciarlo de lo que era la G." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="60.0" fitWidth="234.0" layoutX="322.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.6.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="349.0" prefHeight="31.0" prefWidth="866.0" text="Sustituimos K en la forma fuerte y queda este resultado que es conocido como la FORMA DEBIL del sistema:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="124.0" fitWidth="348.0" layoutX="254.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.7.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane63" layoutX="64.0" layoutY="92.0" prefHeight="547.0" prefWidth="917.0" visible="false">
+               <children>
+                  <Label prefHeight="114.0" prefWidth="855.0" text="Ya es hora de que vayamos armando las matrices que daran solucion a este sistema de ecuaciones lineales que hemos estado formando por estos 6 pasos. Para comenzar definanmos las dimensiones de lo que ya tenemos:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="198.0" prefHeight="88.0" prefWidth="855.0" text="LISTO! ya tenemos las dimensiones de nuestro sistema, ahora falta buscar sus componenetes y ensamblar las matrices que solucionaran el problema. Para mayor facilidad nombraremos estas tres matrices y vectores de la siguiente forma." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="88.0" fitWidth="395.0" layoutX="236.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.8.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="53.0" fitWidth="348.0" layoutX="283.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.9.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="pass6" layoutX="852.0" layoutY="502.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
       <Pane fx:id="pane7" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Button fx:id="pass7" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass7" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Button fx:id="pass7" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
          </children></Pane>
       <Pane fx:id="pane8" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="steppar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Button fx:id="pass8" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass8" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Button fx:id="pass8" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
          </children></Pane>
       <Pane fx:id="pane9" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Button fx:id="pass9" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass9" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Button fx:id="pass9" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
          </children></Pane>
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="528.0" layoutY="691.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/back.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="591.0" layoutY="691.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/next.png" />
-         </image>
-      </ImageView>
       <Button fx:id="home" disable="true" layoutX="1032.0" layoutY="705.0" mnemonicParsing="false" onMousePressed="#home" prefHeight="70.0" prefWidth="74.0" styleClass="btn_step" stylesheets="@../css/steps.css" text="&gt;" textFill="WHITE">
          <font>
             <Font size="32.0" />
+         </font>
+      </Button>
+      <Button fx:id="siguiente" disable="true" layoutX="591.0" layoutY="691.0" mnemonicParsing="false" onMousePressed="#siguiente" prefHeight="45.0" prefWidth="45.0" styleClass="btn_step" stylesheets="@../css/steps.css" text="&gt;" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="anterior" disable="true" layoutX="531.0" layoutY="691.0" mnemonicParsing="false" onMousePressed="#anterior" prefHeight="45.0" prefWidth="45.0" styleClass="btn_step" stylesheets="@../css/steps.css" text="&lt;" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
          </font>
       </Button>
    </children>
