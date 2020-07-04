@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Simu3D_proyecto:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Simu3D_proyecto_jar</output-path>
+    <root id="archive" name="Simu3D_proyecto.jar">
+      <element id="module-output" name="Simu3D_proyecto" />
+    </root>
+  </artifact>
+</component>
