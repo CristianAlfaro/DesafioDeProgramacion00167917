@@ -32,6 +32,12 @@ public class MainController implements Initializable {
     }
 
     @FXML
+    void minimized (MouseEvent event){
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
+
+    @FXML
     void dragged (MouseEvent event){
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();

@@ -1,5 +1,6 @@
 package main.controller;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -123,9 +124,20 @@ public class Step1Controller implements Initializable {
     @FXML
     public void home (MouseEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(FactoryScene.getScene(TypeScene.MAIN, mainApp.getInstance()));
+        stage.setScene(FactoryScene.getScene(TypeScene.BYEBYE, mainApp.getInstance()));
     }
 
+    @FXML
+    void close (MouseEvent event){
+        Platform.exit();
+        System.exit(0);
+    }
+
+    @FXML
+    void minimized (MouseEvent event){
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
 
     @FXML
     void dragged (MouseEvent event){
@@ -462,9 +474,6 @@ public class Step1Controller implements Initializable {
         condiciones.add("neumann");
         condiciones.add("");
         condiciones.add("dirichlet");
-
-        System.out.println(condiciones.get(1));
-
 
     }
 

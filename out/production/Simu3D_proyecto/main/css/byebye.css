@@ -1,0 +1,12 @@
+.button{
+    -fx-background-color: #161d2a;
+    -fx-border: none;
+}
+
+.button:hover{
+    -fx-background-color: #2b3952;
+}
+
+.Pane{
+    -fx-background-color: #1c2538;
+}

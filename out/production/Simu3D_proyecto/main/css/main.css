@@ -1,0 +1,39 @@
+.button1{
+    -fx-background-color: #161d2a;
+    -fx-border: none;
+}
+
+.button1:hover{
+    -fx-background-color: #2b3952;
+}
+
+.button2{
+    -fx-background-color: #161d2a;
+    -fx-border: none;
+}
+
+.button2:hover{
+    -fx-background-color: #612424;
+
+}
+
+.button3{
+    -fx-background-color: transparent;
+    -fx-border: none;
+}
+
+.button3:hover{
+    -fx-text-fill: #0b588b;
+}
+
+.Pane{
+    -fx-background-image: url("../resources/fondo1.jpg");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.pane2{
+    -fx-background-color: #161d2a;
+    -fx-border: none;
+}

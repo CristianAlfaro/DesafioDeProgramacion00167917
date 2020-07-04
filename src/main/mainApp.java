@@ -1,6 +1,7 @@
 package main;
 
 import javafx.application.Application;
+import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -21,6 +22,7 @@ public class mainApp extends Application {
 
         primaryStage.setScene(FactoryScene.getScene(TypeScene.MAIN , this));
         primaryStage.initStyle(StageStyle.TRANSPARENT);
+        primaryStage.getIcons().add(new Image("/main/resources/icon.png"));
         primaryStage.show();
         main = this;
     }
