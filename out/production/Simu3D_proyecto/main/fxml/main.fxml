@@ -7,14 +7,19 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="775.0" prefWidth="1106.0" styleClass="Pane" stylesheets="@../css/button.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.MainController">
    <children>
-      <Button fx:id="start" layoutX="885.0" layoutY="706.0" mnemonicParsing="false" onMousePressed="#start" prefHeight="69.0" prefWidth="221.0" stylesheets="@../css/button.css" text="COMENZAR" textFill="WHITE">
+      <Button fx:id="start" layoutX="443.0" layoutY="644.0" mnemonicParsing="false" onMousePressed="#start" prefHeight="69.0" prefWidth="221.0" stylesheets="@../css/button.css" text="COMENZAR" textFill="WHITE">
          <font>
             <Font size="32.0" />
          </font></Button>
-      <Button mnemonicParsing="false" onMousePressed="#close" prefHeight="70.0" prefWidth="70.0" text="&lt;" textFill="WHITE">
-         <font>
-            <Font size="32.0" />
-         </font></Button>
+      <Pane prefHeight="40.0" prefWidth="1106.0" styleClass="pane2" stylesheets="@../css/button.css">
+         <children>
+            <Button layoutX="1066.0" layoutY="-1.0" mnemonicParsing="false" onMousePressed="#close" prefHeight="40.0" prefWidth="40.0" text="X" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

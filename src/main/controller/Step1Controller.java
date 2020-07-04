@@ -1,27 +1,22 @@
 package main.controller;
 
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 import main.mainApp;
 import main.scenes.FactoryScene;
 import main.scenes.TypeScene;
 
-import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
-import static jdk.nashorn.internal.parser.TokenType.CASE;
 
 public class Step1Controller implements Initializable {
 
@@ -31,6 +26,8 @@ public class Step1Controller implements Initializable {
     int i_5 = 0;
     int i_6 = 0;
     int i_7 = 0;
+    int i_8 = 0;
+    int i_9 = 0;
     int currentPane = 1;
 
     @FXML private Pane pane1;
@@ -42,6 +39,7 @@ public class Step1Controller implements Initializable {
     @FXML private Pane pane7;
     @FXML private Pane pane8;
     @FXML private Pane pane9;
+    @FXML private Pane pane10;
 
     @FXML private Button step1;
     @FXML private Button step2;
@@ -52,6 +50,7 @@ public class Step1Controller implements Initializable {
     @FXML private Button componentes;
     @FXML private Button ensamblaje;
     @FXML private Button step8;
+    @FXML private Button step9;
     @FXML private Button home;
 
     @FXML private Pane pane51;
@@ -89,15 +88,30 @@ public class Step1Controller implements Initializable {
     @FXML private Pane pane725;
     @FXML private Pane pane726;
 
+    @FXML private Pane pane81;
+    @FXML private Pane pane82;
+    @FXML private Pane pane83;
+    @FXML private Pane pane84;
+    @FXML private Pane pane85;
+    @FXML private Pane pane86;
+
+    @FXML private Pane pane91;
+    @FXML private Pane pane92;
+    @FXML private Pane pane93;
+    @FXML private Pane pane94;
+
+
     @FXML private Button anterior;
     @FXML private Button siguiente;
 
     ArrayList<Pane> paneS5 = new ArrayList<Pane>();
     ArrayList<Pane> paneS6 = new ArrayList<Pane>();
     ArrayList<Pane> paneS7 = new ArrayList<Pane>();
+    ArrayList<Pane> paneS8 = new ArrayList<Pane>();
+    ArrayList<Pane> paneS9 = new ArrayList<Pane>();
+    ArrayList<String> ensamblajes = new ArrayList<String>();
+    ArrayList<String> condiciones = new ArrayList<String>();
 
-    private ArrayList<Pane> steps;
-    private int i;
 
 
     @FXML
@@ -175,6 +189,11 @@ public class Step1Controller implements Initializable {
                 pane9();
                 break;
             case 9:
+                currentPane = 10;
+                step9.setDisable(false);
+                pane10();
+                break;
+            case 10:
                 home.setDisable(false);
                 break;
         }
@@ -244,6 +263,11 @@ public class Step1Controller implements Initializable {
         paneAux();
         focused(ensamblaje);
         pane8.setVisible(true);
+        moveAux(paneS8,i_8);
+        if(ensamblajes.get(i_8) != ""){
+            videoPlayer(ensamblajes,paneS8,i_8);
+        }
+
     }
 
     @FXML
@@ -252,6 +276,18 @@ public class Step1Controller implements Initializable {
         paneAux();
         focused(step8);
         pane9.setVisible(true);
+        moveAux(paneS9,i_9);
+        if(condiciones.get(i_9) != ""){
+            videoPlayer(condiciones,paneS9,i_9);
+        }
+    }
+
+    @FXML
+    public void pane10 (){
+        currentPane = 10;
+        paneAux();
+        focused(step9);
+        pane10.setVisible(true);
     }
 
     public void paneAux(){
@@ -264,6 +300,7 @@ public class Step1Controller implements Initializable {
         pane7.setVisible(false);
         pane8.setVisible(false);
         pane9.setVisible(false);
+        pane10.setVisible(false);
         desfocused(step1);
         desfocused(step2);
         desfocused(step3);
@@ -273,6 +310,7 @@ public class Step1Controller implements Initializable {
         desfocused(componentes);
         desfocused(ensamblaje);
         desfocused(step8);
+        desfocused(step9);
         anterior.setDisable(true);
         siguiente.setDisable(true);
     }
@@ -299,6 +337,16 @@ public class Step1Controller implements Initializable {
             i_7++;
             stepAux(paneS7, i_7, "adelante");
             moveAux(paneS7, i_7);
+        }else if(currentPane == 8 && i_8 < paneS8.size()-1){
+            i_8++;
+            stepAux(paneS8, i_8, "adelante");
+            moveAux(paneS8, i_8);
+            pane8();
+        }else if(currentPane == 9 && i_9 < paneS9.size()-1){
+            i_9++;
+            stepAux(paneS9, i_9, "adelante");
+            moveAux(paneS9, i_9);
+            pane9();
         }
     }
 
@@ -316,6 +364,16 @@ public class Step1Controller implements Initializable {
             i_7--;
             stepAux(paneS7, i_7, "atras");
             moveAux(paneS7, i_7);
+        }else if(currentPane == 8 && i_8 > 0){
+            i_8--;
+            stepAux(paneS8, i_8, "atras");
+            moveAux(paneS8, i_8);
+            pane8();
+        }else if(currentPane == 9 && i_9 > 0){
+            i_9--;
+            stepAux(paneS9, i_9, "atras");
+            moveAux(paneS9, i_9);
+            pane9();
         }
     }
 
@@ -349,10 +407,12 @@ public class Step1Controller implements Initializable {
         paneS5.add(pane51);
         paneS5.add(pane52);
         paneS5.add(pane53);
+
         paneS6.add(pane61);
         paneS6.add(pane62);
         paneS6.add(pane63);
         paneS6.add(pane64);
+
         paneS7.add(pane71);
         paneS7.add(pane72);
         paneS7.add(pane73);
@@ -379,5 +439,41 @@ public class Step1Controller implements Initializable {
         paneS7.add(pane725);
         paneS7.add(pane726);
 
+        paneS8.add(pane81);
+        paneS8.add(pane82);
+        paneS8.add(pane83);
+        paneS8.add(pane84);
+        paneS8.add(pane85);
+        paneS8.add(pane86);
+
+        paneS9.add(pane91);
+        paneS9.add(pane92);
+        paneS9.add(pane93);
+        paneS9.add(pane94);
+
+        ensamblajes.add("");
+        ensamblajes.add("");
+        ensamblajes.add("");
+        ensamblajes.add("ensamblajeB");
+        ensamblajes.add("");
+        ensamblajes.add("ensamblajeM");
+
+        condiciones.add("");
+        condiciones.add("neumann");
+        condiciones.add("");
+        condiciones.add("dirichlet");
+
+        System.out.println(condiciones.get(1));
+
+
+    }
+
+    public void videoPlayer(ArrayList<String> names,ArrayList<Pane> panes, int i){
+        MediaPlayer player = new MediaPlayer( new Media(getClass().getResource("/main/resources/"+names.get(i)+".mp4").toExternalForm()));
+        MediaView mediaView = new MediaView(player);
+        player.setAutoPlay(true);
+        mediaView.setFitWidth(855);
+        mediaView.setFitHeight(455);
+        panes.get(i).getChildren().add(mediaView);
     }
 }

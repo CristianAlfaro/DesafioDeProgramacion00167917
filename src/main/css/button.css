@@ -13,3 +13,8 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }
+
+.pane2{
+    -fx-background-color: #161d2a;
+    -fx-border: none;
+}

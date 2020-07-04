@@ -5,7 +5,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
 <Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="775.0" prefWidth="1106.0" styleClass="counter" stylesheets="@../css/steps.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.Step1Controller">
@@ -57,7 +56,12 @@
                   <Font size="32.0" />
                </font>
             </Button>
-            <Button fx:id="back" layoutY="705.0" mnemonicParsing="false" onMousePressed="#back" prefHeight="70.0" prefWidth="74.0" styleClass="btn_step" stylesheets="@../css/steps.css" text="&lt;" textFill="WHITE">
+            <Button fx:id="back" layoutY="700.0" mnemonicParsing="false" onMousePressed="#back" prefHeight="75.0" prefWidth="74.0" styleClass="btn_step" stylesheets="@../css/steps.css" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Button>
+            <Button fx:id="step9" disable="true" layoutY="630.0" mnemonicParsing="false" onMousePressed="#pane10" prefHeight="70.0" prefWidth="74.0" styleClass="btn_step" stylesheets="@../css/steps.css" text="9" textFill="WHITE">
                <font>
                   <Font size="32.0" />
                </font>
@@ -67,7 +71,7 @@
       <Pane fx:id="pane1" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css">
          <children>
             <Button fx:id="pass1" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
-            <Label layoutX="326.0" layoutY="25.0" text="Paso 1 - Localización">
+            <Label layoutX="326.0" layoutY="14.0" text="Paso 1 - Localización">
                <font>
                   <Font size="36.0" />
                </font>
@@ -100,7 +104,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="317.0" layoutY="30.0" text="Paso 2 - Interpolacion">
+            <Label layoutX="318.0" layoutY="14.0" text="Paso 2 - Interpolacion">
                <font>
                   <Font size="36.0" />
                </font>
@@ -119,7 +123,7 @@
       <Pane fx:id="pane3" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css" visible="false">
          <children>
             <Button fx:id="pass3" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
-            <Label layoutX="217.0" layoutY="33.0" text="Paso 3 - Aproximacion del modelo">
+            <Label layoutX="217.0" layoutY="14.0" text="Paso 3 - Aproximacion del modelo">
                <font>
                   <Font size="36.0" />
                </font>
@@ -159,7 +163,7 @@
       <Pane fx:id="pane4" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="steppar" stylesheets="@../css/steps.css" visible="false">
          <children>
             <Button fx:id="pass4" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
-            <Label layoutX="161.0" layoutY="28.0" text="Paso 4 - Metodo de residuos ponderados">
+            <Label layoutX="162.0" layoutY="14.0" text="Paso 4 - Metodo de residuos ponderados">
                <font>
                   <Font size="36.0" />
                </font>
@@ -198,7 +202,7 @@
       </Pane>
       <Pane fx:id="pane5" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Label layoutX="264.0" layoutY="38.0" text="Paso 5 - Metodo de Galerkin">
+            <Label layoutX="264.0" layoutY="14.0" text="Paso 5 - Metodo de Galerkin">
                <font>
                   <Font size="36.0" />
                </font>
@@ -284,7 +288,7 @@
          </children></Pane>
       <Pane fx:id="pane6" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="steppar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Label layoutX="246.0" layoutY="25.0" text="Paso 6 - Integracion por partes">
+            <Label layoutX="246.0" layoutY="14.0" text="Paso 6 - Integracion por partes">
                <font>
                   <Font size="36.0" />
                </font>
@@ -420,7 +424,7 @@
       </Pane>
       <Pane fx:id="pane7" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Label layoutX="283.0" layoutY="23.0" text="Componentes de matrices">
+            <Label layoutX="291.0" layoutY="14.0" text="Componentes matriciales">
                <font>
                   <Font size="36.0" />
                </font>
@@ -1113,21 +1117,161 @@
             </Pane>
 
          </children></Pane>
-      <Pane fx:id="pane8" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="steppar" stylesheets="@../css/steps.css">
+      <Pane fx:id="pane8" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="steppar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Button fx:id="pass8" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
             <Label layoutX="402.0" layoutY="14.0" text="Ensamblaje">
                <font>
                   <Font size="36.0" />
                </font>
             </Label>
-            <MediaView fitHeight="200.0" fitWidth="200.0" layoutX="391.0" layoutY="220.0" />
+            <Pane fx:id="pane81" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0">
+               <children>
+                  <Label prefHeight="108.0" prefWidth="855.0" text="Ya casi acabamos, estamos a dos pasos de terminar, no te desesperes, es momento de ensamblar nuestras matrices solucion, es facil solo hay que guiarnos de la tabla de conectividades, aqui te mostraremos paso a paso como armar las 3 matricez que debemos hacer, antes que nada debes de recordar la formula para obtener los indices de cada variable." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="67.0" fitWidth="144.0" layoutX="364.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/ensamblaje1.1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="184.0" prefHeight="56.0" prefWidth="855.0" text="De paso recordemos nuestro sistema, solo que al termino -K le meteremos el signo en el interior para quitarlo de la notacion." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="62.0" fitWidth="273.0" layoutX="291.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/ensamblaje1.3.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="315.0" prefHeight="56.0" prefWidth="855.0" text="Y para finalizar y empezar con lo bueno debes saber que segun nosotros el sistema era de 8x8, pero eso era para una variable y como tenemos 2, correcto hay que multiplicar x2 asi que nuestro sistema sera asi:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="62.0" fitWidth="273.0" layoutX="291.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/ensamblaje1.4.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="pane82" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="34.0" prefHeight="108.0" prefWidth="855.0" text="Empecemos por el mas facil, el vector X, este solo posee las incógnitas, asi que hay que llenarlo con ellas, solo recordando los indices con las formulas, quiere decir que el A1 debera ir en la posicion i=1 pero el B1 debe ir en la posicion i+n = 9, porque n es el numero de nodos que tenemos." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="347.0" fitWidth="102.0" layoutX="384.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/ensamblaje1.5.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="855.0" text="Ensamblaje del vector X" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane fx:id="pane83" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutX="42.0" layoutY="174.0" prefHeight="156.0" prefWidth="770.0" text="Este cambia con respecto al anterior ya que es mas complejo, pero no llega a ser dificil, solo fijate con atención en el proceso que te mostraremos, eso si, solo lo haremos con un b1, pero es suficiente para que aprendas como hacerlo. Observar con cuidado y compara al final tu resultado con el que te ofrecemos nosotros, deberias llegar al mismo." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="31.0" prefWidth="855.0" text="Ensamblaje del vector b" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane84" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false" />
+            <Pane fx:id="pane85" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutX="42.0" layoutY="174.0" prefHeight="156.0" prefWidth="770.0" text="Esta por mucho es la mas larga y dificil de las matrices a ensamblar, pero no te dejes engañar por lo tedioso que puede llegar a ser, con un poco de esfuerzo y concentrandote bien puede resultar facil, siguiendo la logica del anterior pero ahora aplicado a una matriz 16x16 no un vector 16x1. Observa con cuidado." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="31.0" prefWidth="855.0" text="Ensamblaje de la matriz M" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane86" layoutX="64.0" layoutY="92.0" prefHeight="547.0" prefWidth="917.0" visible="false">
+               <children>
+                  <Button fx:id="pass8" layoutX="852.0" layoutY="502.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+               </children>
+            </Pane>
          </children></Pane>
       <Pane fx:id="pane9" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css" visible="false">
          <children>
-            <Button fx:id="pass9" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Label layoutX="222.0" layoutY="14.0" text="Paso 8 - Condiciones de contorno">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pane91" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0">
+               <children>
+                  <Label layoutX="42.0" layoutY="174.0" prefHeight="156.0" prefWidth="770.0" text="Esta condición es la mas facil de aplicar, resumiendo consiste en agregar un vector que sume a &quot;b&quot; con el valor de Neumann solamente en los nodos adonde pasa la condición." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="31.0" prefWidth="855.0" text="Condición de Neumann" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane92" layoutX="64.0" layoutY="92.0" prefHeight="547.0" prefWidth="917.0" visible="false" />
+            <Pane fx:id="pane93" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutX="42.0" layoutY="174.0" prefHeight="156.0" prefWidth="770.0" text="Esta es un poco mas dicifil pero no te preocupes aun asi es facil comparada a todo lo que ya hecho, esta condición consiste en sustituir en el vector X el valor de algunos B, solo por los que pasa la condición, en este caso son 4 y a esos 4 debemos eliminar sus respectivas filas ya que no se utilizaran porque ya tendriamos sus respuestas, pero no podemos eliminar sus columnas ya que ellas son componentes para las demas incógnitas, por lo que en lugar de eliminar las columnas las sumaremos a &quot;b&quot;. Observa con cuidado y aprecio ya que es el ultimo gran paso que haras." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="31.0" prefWidth="855.0" text="Condición de Dirichlet" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane94" layoutX="64.0" layoutY="92.0" prefHeight="547.0" prefWidth="917.0" visible="false">
+               <children>
+                  <Button fx:id="pass9" layoutX="852.0" layoutY="502.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+               </children></Pane>
          </children></Pane>
-      <Button fx:id="home" disable="true" layoutX="1032.0" layoutY="705.0" mnemonicParsing="false" onMousePressed="#home" prefHeight="70.0" prefWidth="74.0" styleClass="btn_step" stylesheets="@../css/steps.css" text="&gt;" textFill="WHITE">
+      <Pane fx:id="pane10" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css" visible="false">
+         <children>
+            <Button fx:id="pass91" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Label layoutX="328.0" layoutY="14.0" text="Paso Final - Resolver">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="45.0" fitWidth="189.0" layoutX="414.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/pasoFinal.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="42.0" layoutY="134.0" prefHeight="186.0" prefWidth="898.0" text="Despues de tanto alfin TERMINAMOOOOS!!! Fue un gran camino verdad, pero lo logramos ya tenemos nuestro modelo discretizado y formamos un SEL que podemos resolver normalmente, solo nos queda resolverlo pero esto esta fuera del los limites de este metodo asi que no profundizaremos en ellos, solo te dejaremos la forma final de nuestro SEL pero tu ya sabes que significa cada letra y que las construye internamente." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="home" disable="true" layoutX="1032.0" layoutY="700.0" mnemonicParsing="false" onMousePressed="#home" prefHeight="75.0" prefWidth="74.0" styleClass="btn_step" stylesheets="@../css/steps.css" text="&gt;" textFill="WHITE">
          <font>
             <Font size="32.0" />
          </font>
