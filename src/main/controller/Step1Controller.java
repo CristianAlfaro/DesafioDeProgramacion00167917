@@ -30,6 +30,7 @@ public class Step1Controller implements Initializable {
 
     int i_5 = 0;
     int i_6 = 0;
+    int i_7 = 0;
     int currentPane = 1;
 
     @FXML private Pane pane1;
@@ -60,12 +61,40 @@ public class Step1Controller implements Initializable {
     @FXML private Pane pane61;
     @FXML private Pane pane62;
     @FXML private Pane pane63;
+    @FXML private Pane pane64;
+
+    @FXML private Pane pane71;
+    @FXML private Pane pane72;
+    @FXML private Pane pane73;
+    @FXML private Pane pane74;
+    @FXML private Pane pane75;
+    @FXML private Pane pane77;
+    @FXML private Pane pane78;
+    @FXML private Pane pane79;
+    @FXML private Pane pane710;
+    @FXML private Pane pane711;
+    @FXML private Pane pane712;
+    @FXML private Pane pane713;
+    @FXML private Pane pane714;
+    @FXML private Pane pane715;
+    @FXML private Pane pane716;
+    @FXML private Pane pane717;
+    @FXML private Pane pane718;
+    @FXML private Pane pane719;
+    @FXML private Pane pane720;
+    @FXML private Pane pane721;
+    @FXML private Pane pane722;
+    @FXML private Pane pane723;
+    @FXML private Pane pane724;
+    @FXML private Pane pane725;
+    @FXML private Pane pane726;
 
     @FXML private Button anterior;
     @FXML private Button siguiente;
 
     ArrayList<Pane> paneS5 = new ArrayList<Pane>();
     ArrayList<Pane> paneS6 = new ArrayList<Pane>();
+    ArrayList<Pane> paneS7 = new ArrayList<Pane>();
 
     private ArrayList<Pane> steps;
     private int i;
@@ -206,6 +235,7 @@ public class Step1Controller implements Initializable {
         paneAux();
         focused(componentes);
         pane7.setVisible(true);
+        moveAux(paneS7,i_7);
     }
 
     @FXML
@@ -265,6 +295,10 @@ public class Step1Controller implements Initializable {
             i_6++;
             stepAux(paneS6, i_6, "adelante");
             moveAux(paneS6, i_6);
+        }else if(currentPane == 7 && i_7 < paneS7.size()-1){
+            i_7++;
+            stepAux(paneS7, i_7, "adelante");
+            moveAux(paneS7, i_7);
         }
     }
 
@@ -278,6 +312,10 @@ public class Step1Controller implements Initializable {
             i_6--;
             stepAux(paneS6, i_6, "atras");
             moveAux(paneS6, i_6);
+        }else if(currentPane == 7 && i_7 > 0){
+            i_7--;
+            stepAux(paneS7, i_7, "atras");
+            moveAux(paneS7, i_7);
         }
     }
 
@@ -314,5 +352,32 @@ public class Step1Controller implements Initializable {
         paneS6.add(pane61);
         paneS6.add(pane62);
         paneS6.add(pane63);
+        paneS6.add(pane64);
+        paneS7.add(pane71);
+        paneS7.add(pane72);
+        paneS7.add(pane73);
+        paneS7.add(pane74);
+        paneS7.add(pane75);
+        paneS7.add(pane77);
+        paneS7.add(pane78);
+        paneS7.add(pane79);
+        paneS7.add(pane710);
+        paneS7.add(pane711);
+        paneS7.add(pane712);
+        paneS7.add(pane713);
+        paneS7.add(pane714);
+        paneS7.add(pane715);
+        paneS7.add(pane716);
+        paneS7.add(pane717);
+        paneS7.add(pane718);
+        paneS7.add(pane719);
+        paneS7.add(pane720);
+        paneS7.add(pane721);
+        paneS7.add(pane722);
+        paneS7.add(pane723);
+        paneS7.add(pane724);
+        paneS7.add(pane725);
+        paneS7.add(pane726);
+
     }
 }

@@ -356,7 +356,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane fx:id="pane63" layoutX="64.0" layoutY="92.0" prefHeight="547.0" prefWidth="917.0" visible="false">
+            <Pane fx:id="pane63" layoutX="64.0" layoutY="92.0" prefHeight="483.0" prefWidth="855.0" visible="false">
                <children>
                   <Label prefHeight="114.0" prefWidth="855.0" text="Ya es hora de que vayamos armando las matrices que daran solucion a este sistema de ecuaciones lineales que hemos estado formando por estos 6 pasos. Para comenzar definanmos las dimensiones de lo que ya tenemos:" textAlignment="JUSTIFY" wrapText="true">
                      <font>
@@ -378,7 +378,41 @@
                         <Image url="@../resources/paso6.9.png" />
                      </image>
                   </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane64" layoutX="64.0" layoutY="92.0" prefHeight="547.0" prefWidth="917.0" visible="false">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="855.0" text="INTERPOLACION DE VARIABLES" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="31.0" prefHeight="88.0" prefWidth="855.0" text="Antes de seguir con los componenetes de las matrices hay que iterpolar las variables que usaremos porque recordemos que debemos dejar respuestas en (x,y,z) no en (Ԑ,η,ψ), para esto usaremos lo siguiente:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="181.0" fitWidth="455.0" layoutX="200.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.11.png" />
+                     </image>
+                  </ImageView>
                   <Button fx:id="pass6" layoutX="852.0" layoutY="502.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+                  <ImageView fitHeight="141.0" fitWidth="531.0" layoutX="162.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso6.10.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="217.0" prefHeight="88.0" prefWidth="855.0" text="Muy largo, acortemoslo usando esta notacion mas simple." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="471.0" prefHeight="31.0" prefWidth="855.0" text="AHORA SI, HEMOS ACABADO LO FACIL, PREPARATE PARA LO QUE VIENE QUE SERA UN VIAJE LARGO." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
          </children>
@@ -386,6 +420,698 @@
       <Pane fx:id="pane7" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="stepimpar" stylesheets="@../css/steps.css" visible="false">
          <children>
             <Button fx:id="pass7" layoutX="917.0" layoutY="594.0" mnemonicParsing="false" onMousePressed="#pass" styleClass="btn_step" stylesheets="@../css/steps.css" text="Listo" textFill="WHITE" />
+            <Label layoutX="283.0" layoutY="23.0" text="Componentes de matrices">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pane71" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="true">
+               <children>
+                  <Label layoutY="1.0" prefHeight="27.0" prefWidth="193.0" text="REGLA DE LA CADENA" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="201.0" fitWidth="466.0" layoutX="195.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="43.0" prefHeight="31.0" prefWidth="855.0" text="Usaremos la regla de la cadena como apoyo mas adelnate asi que definamos como la usaremos:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="328.0" prefHeight="114.0" prefWidth="855.0" text="Ahora si ya estamos listos para proceder con este largo camino, para facilitar visualizacion y no aburrirte habran procesos que se realizaron fuera de la aplicacion como integrales de un a matriz, pero si tienes duda te invitamos a que uses tu calculadora para corroborar las respuestas que aqui te mostraremos." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane72" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="-3.0" prefHeight="34.0" prefWidth="280.0" text="Componentes del vector f:" textAlignment="JUSTIFY" textFill="#151246" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="43.0" prefHeight="67.0" prefWidth="855.0" text="Comenzaremos con el mas facil, ademas al resolver este es resolver al mismo tiempo el vector e, primero recordemos nuestro vector a tratar." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="70.0" fitWidth="422.0" layoutX="217.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.1.1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="172.0" prefHeight="67.0" prefWidth="855.0" text="Si observaste con cuidado tuviste que haber notado que extrajimos las constantes para mayor facilidad, ahora cambiemos la N por lo que realmente es, un vector. Y ya que estamos porque no repartir la integral a cada termino." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="70.0" fitWidth="368.0" layoutX="14.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.1.2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="185.0" fitWidth="368.0" layoutX="473.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.1.3.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="11.0" fitWidth="128.0" layoutX="368.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/arrow.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane73" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="48.0" prefHeight="67.0" prefWidth="855.0" text="Algo que se nos habia olvidado decirte que como integraremos el volumen, ya que estamos en plano (Ԑ,η,ψ) el diferencial sera de la siquiente forma:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="45.0" fitWidth="376.0" layoutX="270.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.1.4.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="172.0" prefHeight="75.0" prefWidth="855.0" text="Sigamos entonces, sustituyamos el diferencial y expandamos las integrales, con base a lo anterior nombrado" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="217.0" fitWidth="581.0" layoutX="129.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.1.5.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="34.0" prefWidth="280.0" text="Componentes del vector f:" textAlignment="JUSTIFY" textFill="#151246" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane74" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <ImageView fitHeight="114.0" fitWidth="318.0" layoutX="270.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.1.6.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="183.0" prefHeight="75.0" prefWidth="855.0" text="Para terminar presentaremos de manera formal las componentes del vector f:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="75.0" fitWidth="299.0" layoutX="282.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.1.7.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="-3.0" prefHeight="34.0" prefWidth="280.0" text="Componentes del vector f:" textAlignment="JUSTIFY" textFill="#151246" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane75" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <ImageView fitHeight="67.0" fitWidth="330.0" layoutX="275.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.2.1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="31.0" prefHeight="45.0" prefWidth="855.0" text="Este vector es igual que el anterior asi que nos ahoraremos procedimiento y daremos la respuesta:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="124.0" fitWidth="368.0" layoutX="244.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.2.2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="280.0" text="Componentes del vector e:" textAlignment="JUSTIFY" textFill="#b305bc" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="307.0" prefHeight="65.0" prefWidth="855.0" text="Hemos terminado los faciles ahora comenzamos con los restantes, ten en cuenta que habra algunos parecidos asi como el caso de f y e, asi que en esos casos solo resolveremos paso a paso uno de ellos." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane77" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="31.0" prefHeight="70.0" prefWidth="855.0" text="Estas matriz tiene complicaciones y se hara mas dificil con respecto a los anteriores y los que le seguiran, aqui usaremos la regla de la cadena como apoyo, presta mucha atención." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="67.0" fitWidth="300.0" layoutX="301.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz K:" textAlignment="JUSTIFY" textFill="#4c9031" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="146.0" prefHeight="70.0" prefWidth="855.0" text="Recordemos que por la regla de la cadena sabemos todo esto:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="317.0" fitWidth="455.0" layoutX="212.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane78" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="41.0" prefHeight="65.0" prefWidth="855.0" text="Para resolver ∇εN hay que recordar cuanto valen cada una de las N, cuando ya lo tengamos solo es sustituir y resolver en calculadora, al resultado lo llamaremos β" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="114.0" fitWidth="318.0" layoutX="87.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.3.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz K:" textAlignment="JUSTIFY" textFill="#4c9031" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="75.0" fitWidth="273.0" layoutX="446.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.4.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="84.0" fitWidth="219.0" layoutX="296.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.5.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane79" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="41.0" prefHeight="65.0" prefWidth="855.0" text="Ahora debemos encontrar (∇ε X)^(-1) pero para eso seria mas conveniente encontrar (∇ε X) primero, asi que sigamos por ese camino." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz K:" textAlignment="JUSTIFY" textFill="#4c9031" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="311.0" fitWidth="573.0" layoutX="145.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.6.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane710" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="41.0" prefHeight="65.0" prefWidth="855.0" text="Como dijimos antes, ahora debemos calcular (∇ε X)^(-1) y para eso tenemos un formula que nos ayudara:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz K:" textAlignment="JUSTIFY" textFill="#4c9031" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="59.0" fitWidth="226.0" layoutX="315.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.7.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="25.0" layoutY="168.0" prefHeight="75.0" prefWidth="211.0" text="Recordemos que la matriz adjunta se obtiene asi:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="610.0" layoutY="168.0" prefHeight="88.0" prefWidth="211.0" text="Y tambien usaremos una notacion para ahorrar espacio:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="114.0" fitWidth="262.0" layoutX="39.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.8.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="59.0" fitWidth="226.0" layoutX="603.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.9.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="181.0" fitWidth="531.0" layoutX="162.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.10.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane711" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutX="63.0" layoutY="48.0" prefHeight="62.0" prefWidth="232.0" text="A la matriz resultante la nombraremos α" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz K:" textAlignment="JUSTIFY" textFill="#4c9031" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="88.0" fitWidth="232.0" layoutX="63.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.11.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="552.0" layoutY="48.0" prefHeight="92.0" prefWidth="232.0" text="Ahora ya teniendo todos los componentes formaremos nuestro ∇xN" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="74.0" layoutY="228.0" prefHeight="88.0" prefWidth="211.0" text="Llamaremos det al determinante de ∇εX:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="114.0" fitWidth="262.0" layoutX="537.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.12.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="181.0" fitWidth="531.0" layoutX="-86.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.13.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="18.0" fitWidth="205.0" layoutX="327.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/arrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="18.0" fitWidth="211.0" layoutX="333.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true" rotate="152.0">
+                     <image>
+                        <Image url="@../resources/arrow.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane712" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="42.0" prefHeight="62.0" prefWidth="855.0" text="Ya encontramos el valor de ∇xN pero aún nos falta para encontrar el de K, para eso empezaremos tomando una nueva notación para más facilidad:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz K:" textAlignment="JUSTIFY" textFill="#4c9031" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="133.0" fitWidth="538.0" layoutX="189.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.14.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="230.0" fitWidth="466.0" layoutX="195.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.15.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane713" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="42.0" prefHeight="84.0" prefWidth="855.0" text="Tranquilo ya estamos en la recta final de este gran proceso, almenos de la K, solo debemos resolver las integrales de la matriz, pero recuerda, tenemos la conjunta, hay que trasponerla para tener la adjunta, hagamoslo." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz K:" textAlignment="JUSTIFY" textFill="#4c9031" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="133.0" fitWidth="538.0" layoutX="159.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.16.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="190.0" fitWidth="538.0" layoutX="159.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.17.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane714" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="42.0" prefHeight="84.0" prefWidth="855.0" text="Ahora si ya estamos listo para formar los componentes de la matriz K ya que tenemos todas sus partes:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz K:" textAlignment="JUSTIFY" textFill="#4c9031" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="267.0" fitWidth="549.0" layoutX="153.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.18.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane715" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="42.0" prefHeight="31.0" prefWidth="855.0" text="Trabajemos un poco para que nos quede mas &quot;bonito&quot;." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz K:" textAlignment="JUSTIFY" textFill="#4c9031" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="209.0" fitWidth="587.0" layoutX="134.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.19.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="292.0" prefHeight="70.0" prefWidth="855.0" text="Ahora si, no te estoy mintiendo esta vez, ya casi acabamos, es mas ya es la solucion, solo que no podemos dejar todas estas integrales ahi, vamos a la calculadora." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane716" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="42.0" prefHeight="62.0" prefWidth="855.0" text="Procedemos a integran bajo el mismo concepto de la integral triple que ya hicimos antes, al finalizar cada integral nos da esta matriz resultante:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz K:" textAlignment="JUSTIFY" textFill="#4c9031" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="209.0" fitWidth="587.0" layoutX="134.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.20.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="314.0" prefHeight="70.0" prefWidth="855.0" text="Felicidades, esto era el componente mas largo, pudiste notar como nos complico ese delta? ahora solo demos la respuesta formal de la siguiente manera:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="65.0" fitWidth="548.0" layoutX="231.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.3.21.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane717" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="31.0" prefHeight="70.0" prefWidth="855.0" text="Estas componentes seran mucho mas faciles, ademas ya tenemos muchos datos de la matriz K" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="84.0" fitWidth="193.0" layoutX="334.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.4.1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz C:" textAlignment="JUSTIFY" textFill="#3cb058" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="146.0" prefHeight="70.0" prefWidth="855.0" text="Si usamos todo lo que sabemos de la parte pasada, nos queda algo como esto:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="133.0" fitWidth="491.0" layoutX="182.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.4.2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="79.0" fitWidth="405.0" layoutX="283.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.4.3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane718" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="31.0" prefHeight="70.0" prefWidth="855.0" text="Si resolvieramos esto de manera normal nos quedaria algo asi:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="62.0" fitWidth="232.0" layoutX="311.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.4.4.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz C:" textAlignment="JUSTIFY" textFill="#3cb058" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="162.0" prefHeight="84.0" prefWidth="855.0" text="Eso no se puede operar porque las dimenciones de las matrices no lo permiten, tendremosun pequeño problema, pero tranquilo Galerkin nos da la solución, recuerdas que fue su idea lo de los pesos? pues alteremos eso un poco y listo." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="154.0" fitWidth="491.0" layoutX="182.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.4.5.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane719" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="31.0" prefHeight="70.0" prefWidth="855.0" text="Resolvimos el posible tropiezo que teniamos, solo nos queda resolver la matriz en la calculadora y dar una respuesta." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="254.0" fitWidth="395.0" layoutX="230.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.4.6.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz C:" textAlignment="JUSTIFY" textFill="#3cb058" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="170.0" fitWidth="659.0" layoutX="98.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.4.7.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane720" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="31.0" prefHeight="70.0" prefWidth="855.0" text="Terminamos! Solo demos la respuesta bien:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz C:" textAlignment="JUSTIFY" textFill="#3cb058" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="45.0" fitWidth="436.0" layoutX="314.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.4.8.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane721" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="31.0" prefHeight="97.0" prefWidth="855.0" text="Esto sera facil, no tardaremos casi nada, recuerdas la forma de la anterior matriz C? pues es lo mismo casi, solo cambia la variable asi que adelanteremos todo el proceso hasta que lleguemos a la parte en la que hay que integrar." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="84.0" fitWidth="193.0" layoutX="331.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.5.1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz D:" textAlignment="JUSTIFY" textFill="RED" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="179.0" fitWidth="502.0" layoutX="177.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.5.2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane722" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="31.0" prefHeight="97.0" prefWidth="855.0" text="Ahora si viene lo feo y que no nos podemos saltar, resolver esto en la calculadora, te daremos la respuesta pero te invitamos a que verifiques en tu propia calculadora." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz D:" textAlignment="JUSTIFY" textFill="RED" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="114.0" fitWidth="982.0" layoutX="-63.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.5.3.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="199.0" prefHeight="97.0" prefWidth="855.0" text="Que feo quedo eso verdad? pongamosle un nombre y no la miremos mejor." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="45.0" fitWidth="131.0" layoutX="376.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.5.4.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane723" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="31.0" prefHeight="97.0" prefWidth="855.0" text="Terminamos esta tambien, nos quedaria asi:" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz D:" textAlignment="JUSTIFY" textFill="RED" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="67.0" fitWidth="300.0" layoutX="278.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.5.5.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane724" layoutX="64.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="31.0" prefHeight="97.0" prefWidth="855.0" text="Si el anterior te parecio facil este sera un chiste ya que es exactamente lo mismo, solo cambiara la integral a resolver." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="84.0" fitWidth="193.0" layoutX="331.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.6.1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz H:" textAlignment="JUSTIFY" textFill="#1ab4d6"
+                         wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="179.0" fitWidth="502.0" layoutX="177.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.6.2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane725" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="31.0" prefHeight="97.0" prefWidth="855.0" text="Al igual que la matriz anterior, resolvamos en la calculadora." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz H:" textAlignment="JUSTIFY" textFill="#1ab4d6" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="114.0" fitWidth="982.0" layoutX="-63.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.6.3.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="199.0" prefHeight="97.0" prefWidth="855.0" text="Listo ya acabamos, solo pongamole un nombre a esto." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="45.0" fitWidth="131.0" layoutX="376.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.6.4.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane726" layoutX="63.0" layoutY="92.0" prefHeight="455.0" prefWidth="855.0" visible="false">
+               <children>
+                  <Label layoutY="31.0" prefHeight="97.0" prefWidth="855.0" text="Terminamos de sacar los componentes de cada matriz, ahora solo necesitamos ensamblarlas, pero tranquilo lo dificil ya acabo ahora sigue la parte as larga, pero tranquilo te trataremos de explicar paso a paso de manera facil" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="306.0" text="Componentes de la matriz H:" textAlignment="JUSTIFY" textFill="#1ab4d6" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="67.0" fitWidth="300.0" layoutX="278.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/paso7.6.5.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+
          </children></Pane>
       <Pane fx:id="pane8" layoutX="100.0" layoutY="35.0" prefHeight="639.0" prefWidth="982.0" styleClass="steppar" stylesheets="@../css/steps.css" visible="false">
          <children>
